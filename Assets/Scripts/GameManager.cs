@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
     public Paddle _computerPaddle;
     [SerializeField]
     private GameObject _pauseMenu;
+    [SerializeField]
+    private GameObject _gameOver;
 
     private void Update()
     {
@@ -24,6 +26,7 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             SceneManager.LoadScene(1); // Scene 1 == Game, Scene 0 == Main Menu
+            Time.timeScale = 1;
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -41,11 +44,6 @@ public class GameManager : MonoBehaviour
             // Unfreezes game 
             Time.timeScale = 1;   
         }
-        else if (Input.GetKeyDown(KeyCode.D))
-        {
-            SceneManager.LoadScene(0); // Scene 1 == Game, Scene 0 == Main Menu
-            Time.timeScale = 1; 
-        }
     }
 
     public void PlayerScore()
@@ -53,6 +51,11 @@ public class GameManager : MonoBehaviour
         _playerScore++;
         this._playerScoreText.text = _playerScore.ToString();
         Reset();
+        if (_playerScore == 5 || _computerScore == 5)
+        {
+            _gameOver.SetActive(true);
+            Time.timeScale = 0;
+        }
     }
 
     public void ComputerScore()
@@ -60,6 +63,11 @@ public class GameManager : MonoBehaviour
         _computerScore++;
         this._computerScoreText.text = _computerScore.ToString();
         Reset();
+        if (_playerScore == 5 || _computerScore == 5)
+        {
+            _gameOver.SetActive(true);
+            Time.timeScale = 0;
+        }
     }
 
     private void Reset()
