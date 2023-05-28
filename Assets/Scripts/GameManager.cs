@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,6 +15,15 @@ public class GameManager : MonoBehaviour
     public Square _square;
     public Paddle _playerPaddle;
     public Paddle _computerPaddle;
+
+    private void Update()
+    {
+        // Use R key to reset game
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(0);
+        }
+    }
 
     public void PlayerScore()
     {
