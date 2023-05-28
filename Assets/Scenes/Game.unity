@@ -168,6 +168,7 @@ GameObject:
   m_Component:
   - component: {fileID: 378652280}
   - component: {fileID: 378652279}
+  - component: {fileID: 378652281}
   m_Layer: 0
   m_Name: 'Bottom_Wall '
   m_TagString: Untagged
@@ -216,6 +217,19 @@ Transform:
   m_Father: {fileID: 185741991}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &378652281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 378652278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7551d3055a1f2df43b98f5296c37d62b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bounce: 5
 --- !u!1 &481175761
 GameObject:
   m_ObjectHideFlags: 0
@@ -229,6 +243,7 @@ GameObject:
   - component: {fileID: 481175765}
   - component: {fileID: 481175764}
   - component: {fileID: 481175766}
+  - component: {fileID: 481175767}
   m_Layer: 0
   m_Name: Player_paddle
   m_TagString: Untagged
@@ -363,6 +378,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 10
+--- !u!114 &481175767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 481175761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7551d3055a1f2df43b98f5296c37d62b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bounce: 10
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -796,6 +824,7 @@ GameObject:
   - component: {fileID: 1495524764}
   - component: {fileID: 1495524763}
   - component: {fileID: 1495524767}
+  - component: {fileID: 1495524768}
   m_Layer: 0
   m_Name: Computer_paddle
   m_TagString: Untagged
@@ -931,6 +960,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 10
   _square: {fileID: 1364571705}
+--- !u!114 &1495524768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495524762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7551d3055a1f2df43b98f5296c37d62b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bounce: 10
 --- !u!1 &1836568930
 GameObject:
   m_ObjectHideFlags: 0
@@ -941,6 +983,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1836568931}
   - component: {fileID: 1836568932}
+  - component: {fileID: 1836568933}
   m_Layer: 0
   m_Name: Top_Wall
   m_TagString: Untagged
@@ -989,6 +1032,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1836568933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836568930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7551d3055a1f2df43b98f5296c37d62b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bounce: 5
 --- !u!1 &2145051825
 GameObject:
   m_ObjectHideFlags: 0
