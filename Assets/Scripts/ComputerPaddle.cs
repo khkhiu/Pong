@@ -2,17 +2,36 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Inherit from paddle.cs
 public class ComputerPaddle : Paddle
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Rigidbody2D _square;
 
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
-        
+        // Track location of the square to hit it
+        if (this._square.veclocity.x > 0f)
+        {
+            if (this._square.position.y > this.transform.position.y)
+            {
+                _rigidbody.AddForce(Vector2.up * this.speed);
+            }
+            else if (this._square.position.y < this.transform.position.y)
+            {
+                _rigidbody.AddForce(Vector2.down * this.speed);
+            }
+        }
+        // Stay still if square coming directly at computer paddle
+        else
+        {
+            if (this.transform.position.y > 0f)
+            {
+                _rigidbody.AddForce(Vector2.down * this.speed);
+            }
+            else if (this.transform.position.y < 0f)
+            {
+                _rigidbody.AddForce(Vector2.up * this.speed);
+            }
+        }
     }
 }

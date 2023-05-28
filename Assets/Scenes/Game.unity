@@ -795,6 +795,7 @@ GameObject:
   - component: {fileID: 1495524765}
   - component: {fileID: 1495524764}
   - component: {fileID: 1495524763}
+  - component: {fileID: 1495524767}
   m_Layer: 0
   m_Name: Computer_paddle
   m_TagString: Untagged
@@ -916,6 +917,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1495524767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495524762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a29ab987ed062b44854a40df0e2f310, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 10
+  _square: {fileID: 1364571705}
 --- !u!1 &1836568930
 GameObject:
   m_ObjectHideFlags: 0
