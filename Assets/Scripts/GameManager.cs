@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
     public Square _square;
     public Paddle _playerPaddle;
     public Paddle _computerPaddle;
+    [SerializeField]
+    private GameObject _pauseMenu;
 
     private void Update()
     {
@@ -26,6 +28,23 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Application.Quit();
+        }
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            _pauseMenu.SetActive(true);
+            // Freezes game to pause
+            Time.timeScale = 0;
+        }
+        else if (Input.GetKeyDown(KeyCode.A))
+        {
+            _pauseMenu.SetActive(false);
+            // Unfreezes game 
+            Time.timeScale = 1;   
+        }
+        else if (Input.GetKeyDown(KeyCode.D))
+        {
+            SceneManager.LoadScene(0); // Scene 1 == Game, Scene 0 == Main Menu
+            Time.timeScale = 1; 
         }
     }
 
