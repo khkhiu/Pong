@@ -16,17 +16,16 @@ public class Square : MonoBehaviour
     private void Start()
     {
         ResetPosition();
+        AddStartingForce();
     }
 
     public void ResetPosition()
     {
         _rigidbody.position = Vector3.zero;
         _rigidbody.velocity = Vector3.zero;
-
-        AddStartingForce();
     }
 
-    private void AddStartingForce()
+    public void AddStartingForce()
     {
         float x = Random.value < 0.5f ? -1f : 1f;
         // Add random element to movement
