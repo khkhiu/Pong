@@ -25,6 +25,6 @@ public class Square : MonoBehaviour
         float y = Random.value < 0.5f ? Random.Range(-1f, -0.5f) : Random.Range(0.5f, 1f);
         
         Vector2 _direction = new Vector2(x, y);
-        _rigidbody.AddForce(_direction * 3 *this.speed);
+        _rigidbody.AddForce(_direction * 2 *this.speed);
     }
 }
