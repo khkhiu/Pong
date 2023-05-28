@@ -10,15 +10,15 @@ public class ComputerPaddle : Paddle
     private void FixedUpdate()
     {
         // Track location of the square to hit it
-        if (this._square.veclocity.x > 0f)
+        if (this._square.velocity.x > 0f)
         {
             if (this._square.position.y > this.transform.position.y)
             {
-                _rigidbody.AddForce(Vector2.up * this.speed);
+                _rigidbody.AddForce(Vector2.up * this._speed);
             }
             else if (this._square.position.y < this.transform.position.y)
             {
-                _rigidbody.AddForce(Vector2.down * this.speed);
+                _rigidbody.AddForce(Vector2.down * this._speed);
             }
         }
         // Stay still if square coming directly at computer paddle
@@ -26,11 +26,11 @@ public class ComputerPaddle : Paddle
         {
             if (this.transform.position.y > 0f)
             {
-                _rigidbody.AddForce(Vector2.down * this.speed);
+                _rigidbody.AddForce(Vector2.down * this._speed);
             }
             else if (this.transform.position.y < 0f)
             {
-                _rigidbody.AddForce(Vector2.up * this.speed);
+                _rigidbody.AddForce(Vector2.up * this._speed);
             }
         }
     }
