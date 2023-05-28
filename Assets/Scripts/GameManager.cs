@@ -21,7 +21,11 @@ public class GameManager : MonoBehaviour
         // Use R key to reset game
         if (Input.GetKeyDown(KeyCode.R))
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1); // Scene 1 == Game, Scene 0 == Main Menu
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
         }
     }
 
