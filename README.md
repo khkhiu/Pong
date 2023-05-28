@@ -1,5 +1,5 @@
 # PONG
-#### Video Demo:  <URL HERE>
+#### Video Demo:  https://youtu.be/fclLPQodTvQ
 #### Description: Pong game for CS50's final project
 
 ***
