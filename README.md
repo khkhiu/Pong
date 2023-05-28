@@ -1,6 +1,6 @@
 # PONG
 #### Video Demo:  <URL HERE>
-#### Description:
+#### Description: Pong game for CS50's final project
 
 This is a simple pong game for the CS50's final project created using C# and unity. Game development was something that I have always wanted to try and CS50 gave me the perferct opportunity for me to explore the field. Pong was choosen as it is a simple game that I felt could be created relatively quickly. Furthermore, pong would bring my CS50 experience full-circle as I had created a pong game in Week 0 using Scratch.
 
