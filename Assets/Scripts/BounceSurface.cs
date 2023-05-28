@@ -14,7 +14,7 @@ public class BounceSurface : MonoBehaviour
         {
             Vector2 normal = collision.GetContact(0).normal;
             // -normal to bounce in opposite direction
-            square.AddForce(-normal * 1.1f * this._bounce);
+            square.AddForce(-normal * this._bounce);
         }
     }
 }
