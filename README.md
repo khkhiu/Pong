@@ -2,6 +2,9 @@
 #### Video Demo:  https://youtu.be/fclLPQodTvQ
 #### Description: Pong game for CS50's final project
 
+**Link to the CS50 assignment repository**
+<cite><a href="https://github.com/khkhiu/CS50-Assignments">CS50 assignment repository</a></cite>
+
 ***
 
 <strong>Introduction</strong>
